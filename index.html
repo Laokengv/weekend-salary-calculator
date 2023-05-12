@@ -1,12 +1,24 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
         <meta charset="utf-8">
+        <meta name="viewport" content="width-device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" href="stylesheet.css">
         <title>Salary Calculator</title>
     </head>
 
     <body>
         <h1>Salary Calculator</h1>
+
+        <form class="salary-calc-form" onSubmit="salaraySubmit(event)">
+            <input id="first-name" placeholder="First Name" type="text"/>
+            <input id="last-name" placeholder="Last Name" type="text"/>
+            <input id="id-number" placeholder="ID Number" type="text"/>
+            <input id="job-title" placeholder="Job Title" type="text"/>
+            <input id="annual-salary" placeholder="Annual Salary" type="text"/>
+            <input type="submit" value="Submit">
+            <!-- <button type="button" id="submitButton" onclick="employeeSubmit()">Submit</button> -->
     </body>
-    <script src="client.js"></script>
+    <script src="scripts/client.js"></script>
 </html>
