@@ -21,7 +21,7 @@
             <input type="submit" value="Submit">
             <!-- <button type="button" id="submitButton" onclick="employeeSubmit()">Submit</button> -->
         </form>
-        <table id="employees">
+        <table id="employeeInfo">
             <thead>
                 <tr>
                     <h3>Employees</h3>
@@ -32,39 +32,32 @@
                     <th>Annual Salary</th>
                 </tr>
             </thead>
-            <tbody id="mrKrabbs">
-                <thead>
+            <tbody id="employees">
                     <tr>
                         <th>Eugene</th>
                         <th>Krabbs</th>
                         <th>7972</th>
-                        <th>Restaurant Manager</th>   
+                        <th>Manager</th>   
                         <th>$1,000,000</th>
                         <td><button onclick="deleteEntry(event)">Delete</button></td>              
                     </tr>
-                </thead>
-                <tbody id="spongebob">
-                    <thead>
-                        <tr>
-                            <th>Spongebob</th>
-                            <th>Squarepants</th>
-                            <th>7877</th>
-                            <th>Cook</th>   
-                            <th>$25,000</th>
-                            <td><button onclick="deleteEntry(event)">Delete</button></td>              
-                        </tr>
-                    </thead>
-                    <tbody id="spongebob">
-                        <thead>
-                            <tr>
-                                <th>Spongebob</th>
-                                <th>Squarepants</th>
-                                <th>7877</th>
-                                <th>Cook</th>   
-                                <th>$25,000</th>
-                                <td><button onclick="deleteEntry(event)">Delete</button></td>              
-                            </tr>
-                        </thead>
+                    <tr>
+                        <th>Spongebob</th>
+                        <th>Squarepants</th>
+                        <th>7877</th>
+                        <th>Cook</th>   
+                        <th>$25,000</th>
+                        <td><button onclick="deleteEntry(event)">Delete</button></td>              
+                    </tr>
+                    <tr>
+                        <th>Squidward</th>
+                        <th>Tentacles</th>
+                        <th>7940</th>
+                        <th>Cashier</th>   
+                        <th>$18,000</th>
+                        <td><button onclick="deleteEntry(event)">Delete</button></td>              
+                    </tr>
+                </tbody>
     </body>
     <script src="scripts/client.js"></script>
 </html>
