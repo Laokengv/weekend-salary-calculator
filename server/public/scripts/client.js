@@ -1,21 +1,24 @@
 console.log('Hello World');
 
-let contentDiv = document.querySelector('#employeeTable')
 
 function getEmployees() {
+  // function to get employees from server
   fetch('/employees')
     .then((response) => {
       return response.json();
     })
     .then((employees) => {
+      let contentDiv = document.querySelector('#employeeTable')
+
       for (let employee of employees) {
         contentDiv.innerHTML += `
            <tr>
-               <th>${firstName.firstName}</th>
-               <th>${lastName.lastName}</th>
-               <th>${id.id}</th>
-              <th>${title.title}</th>   
-              <th>${annualSalary.annualSalary}</th>
+              <th>${employee.firstName}</th>
+              <th>${employee.lastName}</th>
+              <th>${employee.idNumber}</th>
+              <th>${employee.jobTitle}</th>   
+              <th>${employee.annualSalary}</th>
+              <th><button onclick="deleteEntry(event)">Delete</th>
            </tr>
         `;
       }
@@ -28,6 +31,7 @@ getEmployees();
 
 
 function salarySubmit(event) {
+  // function to post 
   event.preventDefault();
   console.log(event);
 
