@@ -1,5 +1,31 @@
 console.log('Hello World');
 
+let contentDiv = document.querySelector('#employeeTable')
+
+function getEmployees() {
+    fetch('/employees')
+    .then((response) => {
+        return response.json();
+    })
+    .then((employees) => {
+        employeeInfo.innerHTML = employees
+        .map((employee) => {
+            return `
+            <tr>
+                <th>${firstName.firstName}</th>
+                <th>${lastName.lastName}</th>
+                <th>${id.id}</th>
+                <th>${title.title}</th>   
+                <th>${annualSalary.annualSalary}</th>
+            </tr>
+            `;
+        })
+        .join('');
+    });
+};
+getEmployees();
+
+
 function salarySubmit(event) {
     event.preventDefault();
     console.log(event);
@@ -19,6 +45,24 @@ function salarySubmit(event) {
         annualSalary: annualSalary
     });
 
+    fetch('/employees', {
+        method: 'POST',
+        body: employeeToAdd,
+        headers: { 'Content-Type': 'application/json'}})
+    .then((response) =>  {
+        console.log('POST response', response);
+
+        document.querySelector('#first-name').value = '';
+        document.querySelector('#last-name').value = '';
+        document.querySelector('#id-number').value = '';
+        document.querySelector('#fjob-title').value = '';
+        document.querySelector('#annual-salary').value = '';
+
+        getEmployees();
+        }).catch((error) => {
+            console.log(error);
+            alert('Something went wrong');
+        })
 };
 
 function deleteEntry(event) {
