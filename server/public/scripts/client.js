@@ -61,7 +61,7 @@ function salarySubmit(event) {
       document.querySelector('#first-name').value = '';
       document.querySelector('#last-name').value = '';
       document.querySelector('#id-number').value = '';
-      document.querySelector('#fjob-title').value = '';
+      document.querySelector('#job-title').value = '';
       document.querySelector('#annual-salary').value = '';
 
       getEmployees();
