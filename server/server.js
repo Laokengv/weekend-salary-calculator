@@ -10,21 +10,21 @@ const employeeList = [
         lastName: 'Krabs',
         idNumber:  7972,
         jobTitle: 'Manager',
-        annualSalary: 60000
+        annualSalary: ('$' + 60000)
     },
     {
         firstName: 'Spongebob',
         lastName: 'Squarepants',
         idNumber:  7877,
         jobTitle: 'Cook',
-        annualSalary: 25000
+        annualSalary: ('$' + 25000)
     },
     {
         firstName: 'Squidward',
         lastName: 'Tentacles',
         idNumber:  7940,
         jobTitle: 'Cashier',
-        annualSalary: 20000
+        annualSalary: ('$' + 20000)
     }
 ];
                     
