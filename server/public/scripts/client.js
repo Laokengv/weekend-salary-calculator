@@ -2,14 +2,19 @@ console.log('Hello World');
 
 
 function getEmployees() {
+  console.log('in getEmployees');
   // function to get employees from server
   fetch('/employees')
     .then((response) => {
+      console.log('Response received', response);
       return response.json();
     })
     .then((employees) => {
+      let table = document.getElementById('#employeeTable')
       let contentDiv = document.querySelector('#employeeTable')
+      console.log(employees)
 
+      contentDiv.innerHTML = '';
       for (let employee of employees) {
         contentDiv.innerHTML += `
            <tr>
