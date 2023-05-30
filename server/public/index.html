@@ -1,38 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <!-- <meta name="viewport" content="width-device-width, initial-scale=1.0"> -->
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <!-- <link rel="stylesheet" href="public/style.css"> -->
-        <title>Salary Calculator</title>
-    </head>
 
-    <body>
-        <h1>Salary Calculator</h1>
+<head>
+  <meta charset="utf-8">
+  <!-- <meta name="viewport" content="width-device-width, initial-scale=1.0"> -->
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!-- <link rel="stylesheet" href="public/style.css"> -->
+  <title>Salary Calculator</title>
+</head>
 
-        <form class="salary-calc-form">
-            <h2>Add Employee</h2>
-            <input id="first-name" placeholder="First Name" type="text"/>
-            <input id="last-name" placeholder="Last Name" type="text"/>
-            <input id="id-number" placeholder="ID Number" type="text"/>
-            <input id="job-title" placeholder="Job Title" type="text"/>
-            <input id="annual-salary" placeholder="Annual Salary" type="text"/>
-            <input type="submit" value="Submit" onclick="salarySubmit(event)">
-            <!-- <button type="button" id="submitButton" onclick="employeeSubmit()">Submit</button> -->
-        </form>
-        <h3>Employees</h3>
-        <table id="employeeInfo">
-            <thead>
-                <tr>
-                    <th>First Name</th>
-                    <th>Last Name</th>
-                    <th>ID</th>
-                    <th>Title</th>   
-                    <th>Annual Salary</th>
-                </tr>
-            </thead>
-            <tbody id="employeeTable"></tbody>
-    </body>
-    <script src="scripts/client.js"></script>
+<body>
+  <h1>Salary Calculator</h1>
+
+  <form class="salary-calc-form">
+    <h2>Add Employee</h2>
+    <input id="first-name" placeholder="First Name" type="text" />
+    <input id="last-name" placeholder="Last Name" type="text" />
+    <input id="id-number" placeholder="ID Number" type="text" />
+    <input id="job-title" placeholder="Job Title" type="text" />
+    <input id="annual-salary" placeholder="Annual Salary" type="text" />
+    <input type="submit" value="Submit" onclick="salarySubmit(event)">
+    <!-- <button type="button" id="submitButton" onclick="employeeSubmit()">Submit</button> -->
+  </form>
+  <h3>Employees</h3>
+  <table id="employeeInfo">
+    <thead>
+      <tr>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>ID</th>
+        <th>Title</th>
+        <th>Annual Salary</th>
+      </tr>
+    </thead>
+    <tbody id="employeeTable"></tbody>
+  </table>
+  <div>
+    <h3 class="monthlyTotalSal">Monthly Total: <span id="monthlyTotal"></span>0</h3>
+  </div>
+  <div class="inputField">
+    <form id="inputFieldsForm">
+      
+    </form>
+  </div>
+</body>
+<script src="scripts/client.js"></script>
+
 </html>

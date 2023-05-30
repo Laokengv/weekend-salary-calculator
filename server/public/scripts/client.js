@@ -1,5 +1,10 @@
 console.log('Hello World');
 
+let salaryArray = [];
+
+let totalSalary = 0;
+
+const salary = document.querySelector('#monthlyTotal');
 
 function getEmployees() {
   console.log('in getEmployees');
@@ -38,13 +43,13 @@ getEmployees();
 function salarySubmit(event) {
   // function to post 
   event.preventDefault();
-  console.log(event);
+  // console.log(event);
 
   let firstName = document.querySelector('#first-name').value;
   let lastName = document.querySelector('#last-name').value;
   let idNumber = document.querySelector('#id-number').value;
   let jobTitle = document.querySelector('#job-title').value;
-  let annualSalary = document.querySelector('#annual-salary').value;
+  let annualSalary = Number(document.querySelector('#annual-salary').value);
   console.log('Inputs:', firstName, lastName, idNumber, jobTitle, annualSalary);
 
   let employeeToAdd = JSON.stringify({
